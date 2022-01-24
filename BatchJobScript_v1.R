@@ -1,5 +1,5 @@
 #!/bin/bash
-#PBS -l nodes=1:ppn20      #Number of nodes and processors per node
+#PBS -l nodes=1:ppn10      #Number of nodes and processors per node
 #PBS -l walltime=48:00:00  #Maximum wall time
 #PBS -N Tyrannidae_subsp   #Job name; default is name of script
 #PBS -o <file name>        #File name for standard output; default system will name
