@@ -1,13 +1,13 @@
 #!/bin/bash
-#PBS -l nodes=1:ppn=20      #Number of nodes and processors per node
-#PBS -l walltime=48:00:00  #Maximum wall time
-#PBS -N Tyrannidae_subsp   #Job name; default is name of script
-#PBS -o <file name>        #File name for standard output; default system will name
-#PBS -e <file name>        #File name for standard error; default system will name
-#PBS -q checkpt            #Queue name for serial job; most common is checkpt or workq
-#PBS -A hpc_masonlab03     #Allocation name
-#PBS -m e                  #Send mail when job ends
-#PBS -M maggie.macpherson@gmail.com #Send mail to this address
+#PBS -l nodes=1:ppn=20    
+#PBS -l walltime=48:00:00  
+#PBS -N Tyrannidae_subsp   
+#PBS -o <file name>        
+#PBS -e <file name>        
+#PBS -q checkpt            
+#PBS -A hpc_masonlab03     
+#PBS -m e                  
+#PBS -M maggie.macpherson@gmail.com 
 
 module load r/4.0.3/intel-19.0.5
 
