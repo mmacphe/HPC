@@ -1,6 +1,6 @@
 require(diversitree)
 require(devtools)
-install_version("phangorn", version="2.7.1", upgrade = "never")
+install_version("phangorn", version="2.7.1", upgrade = "never", repos="https://cloud.r-project.org")
 library(phangorn)
 require(phytools)
 require(dplyr)
