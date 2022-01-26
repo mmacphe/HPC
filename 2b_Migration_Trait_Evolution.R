@@ -1,3 +1,4 @@
+require(dplyr)
 require(diversitree)
 require(devtools)
 install_version("phangorn", version="2.7.1", upgrade = "never", repos="https://cloud.r-project.org")
@@ -6,7 +7,6 @@ require(phytools)
 require(geiger)		# More functions and models of evolution
 require(paleoTS)    # Useful functions for Akaike Weights calculations
 require(mailR) #to send emails
-require(dplyr)
 
 setwd("./")
 
