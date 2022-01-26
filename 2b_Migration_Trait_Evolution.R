@@ -8,14 +8,16 @@ require(paleoTS)    # Useful functions for Akaike Weights calculations
 require(mailR) #to send emails
 require(dplyr)
 
-write.csv(c(0,1,1,2), file="test.csv")
+write.csv(c(0,1,1,2), file="packages_loaded.csv")
 
 setwd("./")
 
-write.csv(c(0,1,1,3), file="test2.csv")
+write.csv(c(0,1,1,3), file="directory_set_to_current.csv")
 
 #load phylogeny 
 phy=read.tree("MacPherson_Tyrannidae_subspecies.tre") #my subspecies tree (ntips=998)
+
+write.csv(c(0,1,1,4), file="phylogeny_loaded.csv")
 
 #load migration states for the subspecies
 Migration_status=read.csv("Tyrannidae_subspecies_migration_status.csv",row.names=5) #We need a Migratory_Status_Table from R file 2a with status for each taxon (n=998)
@@ -34,6 +36,8 @@ names(states)=row.names(Migration_status)
 names(states)[is.na(names(states))]=""
 names(states)=trimws(names(states))#removes leading/trailing white space
 names(states)=gsub(" ","_",paste(names(states)))
+
+write.csv(c(0,1,1,5), file="Migration_states_curated.csv")
 
 #Resolves polytomies into bifurcating ###
 phy=multi2di(phy)
@@ -58,6 +62,8 @@ end_time=Sys.time()
 time_lik.base=end_time-start_time
 time_lik.base 
 
+write.csv(c(0,1,1,2), file="base_model_fit.csv")
+
 #email notifications
 sender = "maggie.macpherson@gmail.com"
 recipients = c("maggie.macpherson@gmail.com")
@@ -72,6 +78,7 @@ send.mail(from = sender,
                       passwd = PASS, ssl = TRUE),
           authenticate = TRUE,
           send = TRUE)
+write.csv(c(0,1,1,2), file="first_email_sent.csv")
 
 #Remember "Resident"=1, "Partial"=2, "Migratory"=3.
 
