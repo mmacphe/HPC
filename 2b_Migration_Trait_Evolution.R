@@ -1,9 +1,3 @@
-### Calculate character evolution
-#rm(list=ls())
-
-### Set source directory to the folder this file came from within RStudio
-#setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
-
 require(diversitree)
 require(devtools)
 install_version("phangorn", version="2.7.1")
@@ -17,7 +11,6 @@ require(geiger)		# More functions and models of evolution
 require(paleoTS)    # Useful functions for Akaike Weights calculations
 require(diversitree) # More models of evolution
 require(mailR) #to send emails
-#system.file("java",package="mailR")
 
 setwd("./")
 
