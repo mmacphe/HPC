@@ -25,43 +25,43 @@ Migration_status$Status=ifelse(Migration_status$Resid_full==1, "Resident",
                                               NA)))
 
 #Change states from words to numbers using dplyr
-Migration_status$Status<-recode(Migration_status$Status, "Resident"=1, "Partial"=2, "Migratory"=3)
+Migration_status$Status=recode(Migration_status$Status, "Resident"=1, "Partial"=2, "Migratory"=3)
 
-states<-Migration_status$Status
-names(states)<-row.names(Migration_status)
+states=Migration_status$Status
+names(states)=row.names(Migration_status)
 
 #Match migration state data to names in phylogeny 
-names(states)[is.na(names(states))]<-""
-names(states)<-trimws(names(states))#removes leading/trailing white space
-names(states)<-gsub(" ","_",paste(names(states)))
+names(states)[is.na(names(states))]=""
+names(states)=trimws(names(states))#removes leading/trailing white space
+names(states)=gsub(" ","_",paste(names(states)))
 
 #Resolves polytomies into bifurcating ###
-phy<-multi2di(phy)
-phy<-force.ultrametric(phy,method="extend")
+phy=multi2di(phy)
+phy=force.ultrametric(phy,method="extend")
 
 #build likelihood function for characters with more than two states
 diversitree:::default.argnames.musse(3) #shows you the default argnames
-lik<-make.musse(phy, states, 3) #this is the likelihood function for 3 states
+lik=make.musse(phy, states, 3) #this is the likelihood function for 3 states
 #get the parameters for lik as well
 
 #constrain the model (here making all transitions equal)
-lik.base<-constrain(lik, lambda2~lambda1, lambda3~lambda1, 
+lik.base=constrain(lik, lambda2~lambda1, lambda3~lambda1, 
                     mu2~mu1, mu3~mu1,
                     q13~q31, q21~q12, q23~q12, q32~q12)
 argnames(lik.base)
 
 #for the 3 trait character
-p<-starting.point.musse(phy,3)
-start_time<-Sys.time()
-fit.base<-find.mle(lik.base, p[argnames(lik.base)])
-end_time<-Sys.time()
-time_lik.base<-end_time-start_time
+p=starting.point.musse(phy,3)
+start_time=Sys.time()
+fit.base=find.mle(lik.base, p[argnames(lik.base)])
+end_time=Sys.time()
+time_lik.base=end_time-start_time
 time_lik.base 
 
 #email notifications
-sender <- "maggie.macpherson@gmail.com"
-recipients <- c("maggie.macpherson@gmail.com")
-PASS<- as.character("Tyrannu$2018")
+sender = "maggie.macpherson@gmail.com"
+recipients = c("maggie.macpherson@gmail.com")
+PASS= as.character("Tyrannu$2018")
 
 send.mail(from = sender,
           to = recipients,
@@ -78,11 +78,11 @@ send.mail(from = sender,
 ## Allow transition rates to vary
 #Script to fit several models of discrete-trait evolution to a tree.
 #Model A
-A<-constrain(lik,lambda2~lambda1, lambda3~lambda1, mu2~mu1, mu3~mu1)
-start_time<-Sys.time()
-AFit<-find.mle(A,p[argnames(A)])
-end_time<-Sys.time()
-time_ModelA<-end_time-start_time
+A=constrain(lik,lambda2~lambda1, lambda3~lambda1, mu2~mu1, mu3~mu1)
+start_time=Sys.time()
+AFit=find.mle(A,p[argnames(A)])
+end_time=Sys.time()
+time_ModelA=end_time-start_time
 time_ModelA
 
 send.mail(from = sender,
