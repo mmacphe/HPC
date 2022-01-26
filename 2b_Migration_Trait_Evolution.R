@@ -4,11 +4,9 @@ install_version("phangorn", version="2.7.1", upgrade = "never", repos="https://c
 library(phangorn)
 require(phytools)
 require(dplyr)
-require(diversitree)
 require(ape)		# Basic functions for evolutionary trees
 require(geiger)		# More functions and models of evolution
 require(paleoTS)    # Useful functions for Akaike Weights calculations
-require(diversitree) # More models of evolution
 require(mailR) #to send emails
 
 setwd("./")
