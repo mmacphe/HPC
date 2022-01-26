@@ -5,6 +5,10 @@
 #setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 
 require(diversitree)
+require(devtools)
+install_version("phangorn", version="2.7.1")
+3
+library(phangorn)
 require(phytools)
 require(dplyr)
 require(diversitree)
