@@ -96,11 +96,11 @@ send.mail(from = sender,
           send = TRUE)
 
 #Model B
-B<-constrain(lik,lambda2~lambda1, lambda3~lambda1)
-start_time<-Sys.time()
-BFit<-find.mle(B,p[argnames(B)])
-end_time<-Sys.time()
-time_ModelB<-end_time-start_time
+B=constrain(lik,lambda2~lambda1, lambda3~lambda1)
+start_time=Sys.time()
+BFit=find.mle(B,p[argnames(B)])
+end_time=Sys.time()
+time_ModelB=end_time-start_time
 time_ModelB
 
 send.mail(from = sender,
@@ -113,11 +113,11 @@ send.mail(from = sender,
           authenticate = TRUE,
           send = TRUE)
 #Model C
-C<-constrain(lik,mu2~mu1, mu3~mu1)
-start_time<-Sys.time()
-CFit<-find.mle(C,p[argnames(C)])
-end_time<-Sys.time()
-time_ModelC<-end_time-start_time
+C=constrain(lik,mu2~mu1, mu3~mu1)
+start_time=Sys.time()
+CFit=find.mle(C,p[argnames(C)])
+end_time=Sys.time()
+time_ModelC=end_time-start_time
 time_ModelC
 
 send.mail(from = sender,
@@ -130,11 +130,11 @@ send.mail(from = sender,
           authenticate = TRUE,
           send = TRUE)
 #Model D
-D<-constrain(lik,q31~0, q13~0)
-start_time<-Sys.time()
-DFit<-find.mle(D,p[argnames(D)])
-end_time<-Sys.time()
-time_ModelD<-end_time-start_time
+D=constrain(lik,q31~0, q13~0)
+start_time=Sys.time()
+DFit=find.mle(D,p[argnames(D)])
+end_time=Sys.time()
+time_ModelD=end_time-start_time
 time_ModelD  
 
 send.mail(from = sender,
@@ -148,11 +148,11 @@ send.mail(from = sender,
           send = TRUE)
 
 #Model 2
-Trans2<-constrain(lik,q13~0, q31~0)
-start_time<-Sys.time()
+Trans2=constrain(lik,q13~0, q31~0)
+start_time=Sys.time()
 Trans2Fit=find.mle(Trans2,p[argnames(Trans2)])
-end_time<-Sys.time()
-time_Model2<-end_time-start_time
+end_time=Sys.time()
+time_Model2=end_time-start_time
 time_Model2
 
 send.mail(from = sender,
@@ -166,11 +166,11 @@ send.mail(from = sender,
           send = TRUE)
 
 #Model 3
-Trans3<-constrain(lik,q13~0) 
-start_time<-Sys.time()
-Trans3Fit<-find.mle(Trans3,p[argnames(Trans3)])
-end_time<-Sys.time()
-time_Model3<-end_time-start_time
+Trans3=constrain(lik,q13~0) 
+start_time=Sys.time()
+Trans3Fit=find.mle(Trans3,p[argnames(Trans3)])
+end_time=Sys.time()
+time_Model3=end_time-start_time
 time_Model3
 
 send.mail(from = sender,
@@ -184,11 +184,11 @@ send.mail(from = sender,
           send = TRUE)
 
 #Model 4
-Trans4<-constrain(lik,q31~0)
-start_time<-Sys.time()
-Trans4Fit<-find.mle(Trans4,p[argnames(Trans4)])
-end_time<-Sys.time()
-time_Model4<-end_time-start_time
+Trans4=constrain(lik,q31~0)
+start_time=Sys.time()
+Trans4Fit=find.mle(Trans4,p[argnames(Trans4)])
+end_time=Sys.time()
+time_Model4=end_time-start_time
 time_Model4
 
 send.mail(from = sender,
@@ -202,11 +202,11 @@ send.mail(from = sender,
           send = TRUE)
 
 #Model 5
-Trans5<-constrain(lik, q23~0, q32~0)
-start_time<-Sys.time()
-Trans5Fit<-find.mle(Trans5,p[argnames(Trans5)])
-end_time<-Sys.time()
-time_Model5<-end_time-start_time
+Trans5=constrain(lik, q23~0, q32~0)
+start_time=Sys.time()
+Trans5Fit=find.mle(Trans5,p[argnames(Trans5)])
+end_time=Sys.time()
+time_Model5=end_time-start_time
 time_Model5
 
 send.mail(from = sender,
@@ -220,11 +220,11 @@ send.mail(from = sender,
           send = TRUE)
 
 #Model 6
-Trans6<-constrain(lik,q12~0)
-start_time<-Sys.time()
-Trans6Fit<-find.mle(Trans6,p[argnames(Trans6)])
-end_time<-Sys.time()
-time_Model6<-end_time-start_time
+Trans6=constrain(lik,q12~0)
+start_time=Sys.time()
+Trans6Fit=find.mle(Trans6,p[argnames(Trans6)])
+end_time=Sys.time()
+time_Model6=end_time-start_time
 time_Model6  
 
 send.mail(from = sender,
@@ -238,11 +238,11 @@ send.mail(from = sender,
           send = TRUE)
 
 #Model 7
-Trans7<-constrain(lik,q21~0)
-start_time<-Sys.time()
-Trans7Fit<-find.mle(Trans7,p[argnames(Trans7)])
-end_time<-Sys.time()
-time_Model7<-end_time-start_time
+Trans7=constrain(lik,q21~0)
+start_time=Sys.time()
+Trans7Fit=find.mle(Trans7,p[argnames(Trans7)])
+end_time=Sys.time()
+time_Model7=end_time-start_time
 time_Model7
 
 send.mail(from = sender,
@@ -256,11 +256,11 @@ send.mail(from = sender,
           send = TRUE)
 
 #Model 8
-Trans8<-constrain(lik,q21~0, q12~0)
-start_time<-Sys.time()
-Trans8Fit<-find.mle(Trans8,p[argnames(Trans8)])
-end_time<-Sys.time()
-time_Model8<-end_time-start_time
+Trans8=constrain(lik,q21~0, q12~0)
+start_time=Sys.time()
+Trans8Fit=find.mle(Trans8,p[argnames(Trans8)])
+end_time=Sys.time()
+time_Model8=end_time-start_time
 time_Model8
 
 send.mail(from = sender,
@@ -274,11 +274,11 @@ send.mail(from = sender,
           send = TRUE)
 
 #Model 9
-Trans9<-constrain(lik, q23~0)
-start_time<-Sys.time()
-Trans9Fit<-find.mle(Trans9,p[argnames(Trans9)])
-end_time<-Sys.time()
-time_Model9<-end_time-start_time
+Trans9=constrain(lik, q23~0)
+start_time=Sys.time()
+Trans9Fit=find.mle(Trans9,p[argnames(Trans9)])
+end_time=Sys.time()
+time_Model9=end_time-start_time
 time_Model9 
 
 send.mail(from = sender,
@@ -292,11 +292,11 @@ send.mail(from = sender,
           send = TRUE)
 
 #Model 10
-Trans10<-constrain(lik, q32~0)
-start_time<-Sys.time()
-Trans10Fit<-find.mle(Trans10,p[argnames(Trans10)])
-end_time<-Sys.time()
-time_Model10<-end_time-start_time
+Trans10=constrain(lik, q32~0)
+start_time=Sys.time()
+Trans10Fit=find.mle(Trans10,p[argnames(Trans10)])
+end_time=Sys.time()
+time_Model10=end_time-start_time
 time_Model10
   
 send.mail(from = sender,
@@ -309,70 +309,70 @@ send.mail(from = sender,
           authenticate = TRUE,
           send = TRUE)
 
-rates<-fit.base$par.full
+rates=fit.base$par.full
 write.csv(rates,file="BaseModelParameters.csv")
 
-LnLfit.base<-fit.base$lnLik 
-LnLA<-AFit$lnLik
-LnLB<-BFit$lnLik
-LnLC<-CFit$lnLik
-LnLD<-DFit$lnLik 
-LnLTrans2<-Trans2Fit$lnLik 
-LnLTrans3<-Trans3Fit$lnLik
-LnLTrans4<-Trans4Fit$lnLik 
-LnLTrans5<-Trans5Fit$lnLik
-LnLTrans6<-Trans6Fit$lnLik 
-LnLTrans7<-Trans7Fit$lnLik 
-LnLTrans8<-Trans8Fit$lnLik 
-LnLTrans9<-Trans9Fit$lnLik
-LnLTrans10<-Trans10Fit$lnLik
+LnLfit.base=fit.base$lnLik 
+LnLA=AFit$lnLik
+LnLB=BFit$lnLik
+LnLC=CFit$lnLik
+LnLD=DFit$lnLik 
+LnLTrans2=Trans2Fit$lnLik 
+LnLTrans3=Trans3Fit$lnLik
+LnLTrans4=Trans4Fit$lnLik 
+LnLTrans5=Trans5Fit$lnLik
+LnLTrans6=Trans6Fit$lnLik 
+LnLTrans7=Trans7Fit$lnLik 
+LnLTrans8=Trans8Fit$lnLik 
+LnLTrans9=Trans9Fit$lnLik
+LnLTrans10=Trans10Fit$lnLik
 
-results<-as.data.frame(c(LnLfit.base, LnLA, LnLB, LnLC, LnLD, LnLTrans2, LnLTrans3,
+results=as.data.frame(c(LnLfit.base, LnLA, LnLB, LnLC, LnLD, LnLTrans2, LnLTrans3,
                          LnLTrans4, LnLTrans5, LnLTrans6, LnLTrans7, LnLTrans8, LnLTrans9,
                          LnLTrans10))  
     
-AICcfit.base<-IC(fit.base$lnLik,12,method="AICc",n=phy$Nnode)
-AICcA<-IC(AFit$lnLik,6,method="AICc",n=phy$Nnode)
-AICcB<-IC(BFit$lnLik,8,method="AICc",n=phy$Nnode)
-AICcC<-IC(CFit$lnLik,8,method="AICc",n=phy$Nnode)
-AICcD<-IC(DFit$lnLik,10,method="AICc",n=phy$Nnode)
-AICcTrans2<-IC(Trans2Fit$lnLik,10,method="AICc",n=phy$Nnode) 
-AICcTrans3<-IC(Trans3Fit$lnLik,11,method="AICc",n=phy$Nnode)
-AICcTrans4<-IC(Trans4Fit$lnLik,11,method="AICc",n=phy$Nnode) 
-AICcTrans5<-IC(Trans5Fit$lnLik,10,method="AICc",n=phy$Nnode)
-AICcTrans6<-IC(Trans6Fit$lnLik,11,method="AICc",n=phy$Nnode) 
-AICcTrans7<-IC(Trans7Fit$lnLik,11,method="AICc",n=phy$Nnode)
-AICcTrans8<-IC(Trans8Fit$lnLik,10,method="AICc",n=phy$Nnode) 
-AICcTrans9<-IC(Trans9Fit$lnLik,11,method="AICc",n=phy$Nnode)
-AICcTrans10<-IC(Trans10Fit$lnLik,11,method="AICc",n=phy$Nnode)
+AICcfit.base=IC(fit.base$lnLik,12,method="AICc",n=phy$Nnode)
+AICcA=IC(AFit$lnLik,6,method="AICc",n=phy$Nnode)
+AICcB=IC(BFit$lnLik,8,method="AICc",n=phy$Nnode)
+AICcC=IC(CFit$lnLik,8,method="AICc",n=phy$Nnode)
+AICcD=IC(DFit$lnLik,10,method="AICc",n=phy$Nnode)
+AICcTrans2=IC(Trans2Fit$lnLik,10,method="AICc",n=phy$Nnode) 
+AICcTrans3=IC(Trans3Fit$lnLik,11,method="AICc",n=phy$Nnode)
+AICcTrans4=IC(Trans4Fit$lnLik,11,method="AICc",n=phy$Nnode) 
+AICcTrans5=IC(Trans5Fit$lnLik,10,method="AICc",n=phy$Nnode)
+AICcTrans6=IC(Trans6Fit$lnLik,11,method="AICc",n=phy$Nnode) 
+AICcTrans7=IC(Trans7Fit$lnLik,11,method="AICc",n=phy$Nnode)
+AICcTrans8=IC(Trans8Fit$lnLik,10,method="AICc",n=phy$Nnode) 
+AICcTrans9=IC(Trans9Fit$lnLik,11,method="AICc",n=phy$Nnode)
+AICcTrans10=IC(Trans10Fit$lnLik,11,method="AICc",n=phy$Nnode)
 
-results$AIC<-c(AICcfit.base, AICcA, AICcB, AICcC, AICcD, AICcTrans2, AICcTrans3, 
+results$AIC=c(AICcfit.base, AICcA, AICcB, AICcC, AICcD, AICcTrans2, AICcTrans3, 
                AICcTrans4, AICcTrans5, AICcTrans6, AICcTrans7, AICcTrans8, 
                AICcTrans9, AICcTrans10)
       
-BICfit.base<-IC(fit.base$lnLik,12,method="BIC",n=phy$Nnode)
-BICA<-IC(AFit$lnLik,6,method="BIC",n=phy$Nnode)
-BICB<-IC(BFit$lnLik,8,method="BIC",n=phy$Nnode)
-BICC<-IC(CFit$lnLik,8,method="BIC",n=phy$Nnode)
-BICD<-IC(DFit$lnLik,10,method="BIC",n=phy$Nnode)
-BICTrans2<-IC(Trans2Fit$lnLik,10,method="BIC",n=phy$Nnode) 
-BICTrans3<-IC(Trans3Fit$lnLik,11,method="BIC",n=phy$Nnode)
-BICTrans4<-IC(Trans4Fit$lnLik,11,method="BIC",n=phy$Nnode) 
-BICTrans5<-IC(Trans5Fit$lnLik,10,method="BIC",n=phy$Nnode) 
-BICTrans6<-IC(Trans6Fit$lnLik,11,method="BIC",n=phy$Nnode) 
-BICTrans7<-IC(Trans7Fit$lnLik,11,method="BIC",n=phy$Nnode)
-BICTrans8<-IC(Trans8Fit$lnLik,10,method="BIC",n=phy$Nnode) 
-BICTrans9<-IC(Trans9Fit$lnLik,11,method="BIC",n=phy$Nnode)
-BICTrans10<-IC(Trans10Fit$lnLik,11,method="BIC",n=phy$Nnode)
+BICfit.base=IC(fit.base$lnLik,12,method="BIC",n=phy$Nnode)
+BICA=IC(AFit$lnLik,6,method="BIC",n=phy$Nnode)
+BICB=IC(BFit$lnLik,8,method="BIC",n=phy$Nnode)
+BICC=IC(CFit$lnLik,8,method="BIC",n=phy$Nnode)
+BICD=IC(DFit$lnLik,10,method="BIC",n=phy$Nnode)
+BICTrans2=IC(Trans2Fit$lnLik,10,method="BIC",n=phy$Nnode) 
+BICTrans3=IC(Trans3Fit$lnLik,11,method="BIC",n=phy$Nnode)
+BICTrans4=IC(Trans4Fit$lnLik,11,method="BIC",n=phy$Nnode) 
+BICTrans5=IC(Trans5Fit$lnLik,10,method="BIC",n=phy$Nnode) 
+BICTrans6=IC(Trans6Fit$lnLik,11,method="BIC",n=phy$Nnode) 
+BICTrans7=IC(Trans7Fit$lnLik,11,method="BIC",n=phy$Nnode)
+BICTrans8=IC(Trans8Fit$lnLik,10,method="BIC",n=phy$Nnode) 
+BICTrans9=IC(Trans9Fit$lnLik,11,method="BIC",n=phy$Nnode)
+BICTrans10=IC(Trans10Fit$lnLik,11,method="BIC",n=phy$Nnode)
   
-results$BIC<-c(BICfit.base, BICA, BICB, BICC, BICD, BICTrans2, BICTrans3, 
+results$BIC=c(BICfit.base, BICA, BICB, BICC, BICD, BICTrans2, BICTrans3, 
                BIDTrans4, BICTrans5, BICTrans6, BICTrans7, BICTrans8,
                BICTrans9, BICTrans10)
-results$Model<-c("base", "A", "B", "C", "D", "Trans2", "Trans3", "Trans4", 
+results$Model=c("base", "A", "B", "C", "D", "Trans2", "Trans3", "Trans4", 
                  "Trans5", "Trans6", "Trans7", "Trans8", "Trans9", "Trans10")
 
-results<-results[,c(4,1,2,3)]
-results<-rename(results, LnLik=`c(LnLfit.base, LnLA, LnLB, LnLC, LnLTrans3, LnLTrans5, LnLTrans7, LnLTrans9, LnLTrans10)`)
+results=results[,c(4,1,2,3)]
+results=rename(results, LnLik=`c(LnLfit.base, LnLA, LnLB, LnLC, LnLTrans3, LnLTrans5, LnLTrans7, LnLTrans9, LnLTrans10)`)
 write.csv(results,file="Tyrannidae_MuSSEresults.csv",row.names=FALSE)
 
 write.csv(AFit$par.full, file="Tyrannidae_ModelAParameters.csv", row.names=TRUE)
