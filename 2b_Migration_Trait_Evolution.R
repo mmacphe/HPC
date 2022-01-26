@@ -1,7 +1,6 @@
 require(diversitree)
 require(devtools)
-install_version("phangorn", version="2.7.1")
-3
+install_version("phangorn", version="2.7.1", upgrade = "never")
 library(phangorn)
 require(phytools)
 require(dplyr)
