@@ -13,8 +13,8 @@ write.csv(c(0,1,1,2), file="packages_loaded.csv")
 setwd("./")
 
 write.csv(c(0,1,1,3), file="directory_set_to_current.csv")
+getwd()
 
-#load phylogeny 
 phy<-read.tree("MacPherson_Tyrannidae_subspecies.tre") #my subspecies tree (ntips=998)
 
 write.csv(c(0,1,1,4), file="phylogeny_loaded.csv")
