@@ -8,7 +8,11 @@ require(paleoTS)    # Useful functions for Akaike Weights calculations
 require(mailR) #to send emails
 require(dplyr)
 
+write.csv(c(0,1,1,2), file="test.csv")
+
 setwd("./")
+
+write.csv(c(0,1,1,3), file="test2.csv")
 
 #load phylogeny 
 phy=read.tree("MacPherson_Tyrannidae_subspecies.tre") #my subspecies tree (ntips=998)
