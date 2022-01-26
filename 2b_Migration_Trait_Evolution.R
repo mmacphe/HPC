@@ -20,7 +20,7 @@ phy<-read.tree("/home/maggie/hpc/MacPherson_Tyrannidae_subspecies.tre") #my subs
 write.csv(c(0,1,1,4), file="phylogeny_loaded.csv")
 
 #load migration states for the subspecies
-Migration_status=read.csv("Tyrannidae_subspecies_migration_status.csv",row.names=5) #We need a Migratory_Status_Table from R file 2a with status for each taxon (n=998)
+Migration_status=read.csv("/home/maggie/hpc/Tyrannidae_subspecies_migration_status.csv",row.names=5) #We need a Migratory_Status_Table from R file 2a with status for each taxon (n=998)
 Migration_status$Status=ifelse(Migration_status$Resid_full==1, "Resident",
                                 ifelse(Migration_status$Resid_partial==1, "Partial",
                                        ifelse(Migration_status$Migr_dir_full==1, "Migratory",
