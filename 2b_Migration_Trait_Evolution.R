@@ -15,7 +15,7 @@ setwd("./")
 write.csv(c(0,1,1,3), file="directory_set_to_current.csv")
 
 #load phylogeny 
-phy=read.tree("MacPherson_Tyrannidae_subspecies.tre") #my subspecies tree (ntips=998)
+phy<-read.tree("MacPherson_Tyrannidae_subspecies.tre") #my subspecies tree (ntips=998)
 
 write.csv(c(0,1,1,4), file="phylogeny_loaded.csv")
 
